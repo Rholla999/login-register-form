@@ -1,5 +1,3 @@
-
-
 * {
     box-sizing: border-box;
 }
@@ -153,17 +151,15 @@ body {
     transition: all 0.6s ease-in-out;
 }
 
-.container .sign-in-container {
+.container .signin-container {
     left: 0;
     width: 50%;
     z-index: 2;
 }
 
-/* .container.right-panel-active .register-container {
-    transform: translateX(100%);
-} */
 
-.sign-up-container {
+
+.register-container {
     left: 0;
     width: 50%;
     opacity: 0;
@@ -175,6 +171,13 @@ body {
     opacity: 1;
     z-index: 5;
     animation: show 0.6s;
+}
+
+.container.left-panel-active .login-container {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 1;
+    animation: hide 0.6s;
 }
 
 @keyframes show {
@@ -218,10 +221,14 @@ body {
     width: 200%;
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
-    
+
 }
 
 .container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.container.left-panel-active .overlay {
     transform: translateX(50%);
 }
 
@@ -241,7 +248,7 @@ body {
     
 }
 
-.overlay-left {
+.container .overlay-left {
     transform: translateX(-20%);
 }
 
@@ -295,35 +302,66 @@ body {
 }
 
 
-@media only screen and (max-width: 600px) {
-   .container {
+.container .mobile-message {
+    display: none;
+   }
+
+
+@media only screen and (max-width: 767px) {
+  
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    body { 
+      height: auto;
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    .container {
       min-width: 100%;
-      min-height: 100vh;
+      height: calc(100vh - 30px);
       display: flex;
       flex-direction: column;
+      box-shadow: none;
+      
    }
 
    
-   .overlay-container {
+   .overlay-container  {
       position: relative;   
       width: 100%;
       height: 180px; 
+      top: 0px;
       left: 0;
-      top: 0;
       transform: none !important;
       overflow: visible;
-      z-index: 1;
+      z-index: 1000;
+      border-radius: 0px;
    }
 
-   .overlay {
+   .container .overlay-container p{
+      font-size: min(12px, 3vw);
+      word-wrap: break-word;
+   }
+
+   
+
+   .container .mobile-message {
+    display: block;
+   }
+   .container .overlay {
       position: relative;
       width: 100%;
       height: 100%;
       left: 0;
-      transform: none !important;
+      top: 0;
+      
    }
 
-   .overlay-panel {
+   .container .overlay-panel {
       position: relative;
       width: 100%;
       height: 100%;
@@ -331,21 +369,72 @@ body {
       padding: 20px;
    }
 
-   /* Forms stacked below overlay */
+   .container .overlay .overlay-left {
+        right: -1000px; 
+        position: absolute;
+        /* transform: translateX(-200%); */
+        
+   }
+
+   
+
+   .container .register-container {
+      margin-top: 80px;
+      
+   }
+
+  
    .form-container {
       position: relative;
       width: 100%;
       height: auto;
       margin-top: 20px;
-      transform: none !important;
       z-index: 2;
    }
 
-   .sign-in-container,
-   .sign-up-container {
-      position: relative;
-      width: 100%;
-      opacity: 1;    
-      z-index: 2;
+   .login-container {
+    opacity: 1;
+    z-index: 2;
+    margin-top: 121px; 
    }
+
+
+   .register-container {
+    opacity: 0;
+    z-index: 1;
+   }
+    .container.right-panel-active .register-container {
+        opacity: 2;
+        z-index: 50;
+        margin-top: 120px;
+        transform: translateX(-5px);
+    }
+    .container.right-panel-active .login-container {
+          opacity: 0;
+          z-index: 1;
+          display: none;
+    }
+
+    .container.right-panel-active .overlay-left {
+        transform: translateX(0);
+         position: absolute;
+         left: -198px;
+          background: -webkit-linear-gradient(to right, #07072e, #191970, #07072e);
+        background: linear-gradient(to right, #07072e, #191970, #07072e);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+         
+    }
+
+   
+   
+   
+}
+
+
+.container .error {
+   color: red;
+   font-size: 11px;
+   display: none;
 }

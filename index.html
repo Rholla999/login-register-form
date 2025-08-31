@@ -10,7 +10,7 @@
 <body>
 
     <section class="container" id="container">
-        <div class="form-container register-container">
+        <div class="form-container register-container" id="register">
             <form action="#">
                 <h3>Begin Your Journey with us</h3>
                 <div>
@@ -28,15 +28,16 @@
                 <div>
                 <label for="password">
                     password:
-                    <input type="password">
+                    <input type="password" id="password" required>
                 </label>
                 </div>
                 <div>
                 <label for="password">
                     verify password:
-                    <input type="password">
+                    <input type="password" id="verifyPassword" required>
                 </label>   
                 </div> 
+                <p class="error"></p>
                 <button type="button">REGISTER</button>
                   <div class="socials-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i> <span class="hide">facebook</span> </a>
@@ -66,12 +67,14 @@
                 <a href="#">Forgotten password</a>
                 <button type="button">LOGIN</button>
                   <div class="socials-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i> <span class="hide">facebook</span> </a>
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i> <span class="hide">facebook</span></a>
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i> <span class="hide">google</span></a>
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i> <span class="hide">linkedin</span></a>
 				<a href="#" class="social"><i class="fab fa-github"></i> <span class="hide">githbu</span></a>
 				<a href="#" class="social"><i class="fab fa-twitter"></i> <span class="hide">twitter</span></a>
 			</div>
+
+              
             </form>
         </div>
         <div class="overlay-container">
@@ -87,8 +90,11 @@
 				<button  type="button" class="ghost" id="signUp"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg> Sign Up</button>
 			</div>
 		</div>
+
+      
 	</div>
 
+    
 
     </section>
 
