@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN/REGISTER FORM</title>
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <section class="container" id="container">
+        <div class="form-container register-container">
+            <form action="#">
+                <h3>Begin Your Journey with us</h3>
+                <div>
+                <label for="name">
+                    name:
+                    <input type="text" placeholder="MEMBA Aku">
+                </label>
+                </div>
+                <div>
+                <label for="email">
+                    email: 
+                    <input type="email" placeholder="membaaku34@gmail.com">
+                </label>
+                </div>
+                <div>
+                <label for="password">
+                    password:
+                    <input type="password">
+                </label>
+                </div>
+                <div>
+                <label for="password">
+                    verify password:
+                    <input type="password">
+                </label>   
+                </div> 
+                <button type="button">REGISTER</button>
+                  <div class="socials-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i> <span class="hide">facebook</span> </a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i> <span class="hide">google</span></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i> <span class="hide">linkedin</span></a>
+				<a href="#" class="social"><i class="fab fa-github"></i> <span class="hide">githbu</span></a>
+				<a href="#" class="social"><i class="fab fa-twitter"></i> <span class="hide">twitter</span></a>
+			</div>
+            </form>
+        </div>
+
+         <div class="form-container login-container">
+            <form action="#">
+                <h3>Continue from were you left</h3>
+                <div>
+                <label for="name">
+                    username:
+                    <input type="text" placeholder="username/email">
+                </label>
+                </div>
+                <div>
+                <label for="password">
+                    password:
+                    <input type="password">
+                </label>
+                </div>
+                <a href="#">Forgotten password</a>
+                <button type="button">LOGIN</button>
+                  <div class="socials-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i> <span class="hide">facebook</span> </a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i> <span class="hide">google</span></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i> <span class="hide">linkedin</span></a>
+				<a href="#" class="social"><i class="fab fa-github"></i> <span class="hide">githbu</span></a>
+				<a href="#" class="social"><i class="fab fa-twitter"></i> <span class="hide">twitter</span></a>
+			</div>
+            </form>
+        </div>
+        <div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h3>Welcome Back!</h3>
+				<p>Pick up where you left, please login with your personal info</p>
+				<button type="button" class="ghost" id="signIn"> Sign In <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg> </button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h3>Heyy, there!!!</h3>
+				<p>Start your journey with us today, with just a click.</p>
+				<button  type="button" class="ghost" id="signUp"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M360-200 80-480l280-280 56 56-183 184h647v80H233l184 184-57 56Z"/></svg> Sign Up</button>
+			</div>
+		</div>
+	</div>
+
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
